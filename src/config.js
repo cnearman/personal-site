@@ -2,19 +2,19 @@ module.exports = {
 	navigationLinks: [
 		{
 			name: 'About',
-			url: '/#about'
+			url: '/about'
 		},
 		{
 			name: 'Blog',
-			url: '/#blog'
+			url: '/blog'
 		},
 		{
 			name: 'Games',
-			url: '/#games'
+			url: '/games'
 		},
 		{
 			name: 'Resume',
-			url: '/#resume'
+			url: '/resume'
 		}
 	],
 
