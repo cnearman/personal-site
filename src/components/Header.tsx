@@ -11,6 +11,10 @@ const HeaderContainer = styled.header`
 	align-items: center;
 	padding: 16px 55px;
 	justify-content: space-between;
+	${media.desktop`
+		padding-left: 10px;
+		padding-right: 10px;
+	`};
 `;
 
 const NavLinkContainer = styled.div`

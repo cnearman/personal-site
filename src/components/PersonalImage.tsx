@@ -7,19 +7,24 @@ const ImagePlacer = styled.div`
 	width: 686px;
 	height: 705px;
 	position: absolute;
-	bottom: 0;
+	bottom: -1px;
 	right: -11px;
 	${media.desktop`
 		width: 100%;
 		height: auto;
+		max-height: max-content;
+		bottom: -10px;
 	`};
-	margin:0px;
+`
+
+const ImageObject = styled.img`
+	margin:0px 0px;
 `
 
 const PersonalImage = () => {
 	return (
 		<ImagePlacer>
-			<img src={silhouette} />
+			<ImageObject src={silhouette} />
 		</ImagePlacer>
 	);
 }

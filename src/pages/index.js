@@ -18,7 +18,7 @@ const Main = ({ data, location }) => {
 
   return (
     <IndexLayout location={location} title={siteTitle}>
-      <SEO title="index" />
+      <SEO title="Home" />
       <ImageBackground imageUrl={background} topOffset="0" leftOffset="0" />
       <IndexTextContainer phrases={phraseArray}/>
       <PersonalImage />
