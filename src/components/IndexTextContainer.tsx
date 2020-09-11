@@ -27,8 +27,8 @@ const TextElementContainer = styled.section`
 const IndexTextContainer = (props) => {
 	return (
 		<TextElementContainer>
-			{props.phrases && props.phrases.map((element) => (
-				<TextElement>{element}</TextElement>
+			{props.phrases && props.phrases.map((element, index) => (
+				<TextElement id={`indexElement${index + 1}`}>{element}</TextElement>
 			))}
 		</TextElementContainer>
 	);

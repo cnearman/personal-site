@@ -10,6 +10,7 @@ import ImageBackground from "@components/ImageBackground";
 import IndexTextContainer from "@components/IndexTextContainer";
 import PersonalImage from "@components/PersonalImage";
 import background from "@assets/background.png";
+import Loader from "@components/Loader";
 
 const Main = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -18,6 +19,7 @@ const Main = ({ data, location }) => {
 
   return (
     <IndexLayout location={location} title={siteTitle}>
+      <Loader />
       <SEO title="Home" />
       <ImageBackground imageUrl={background} topOffset="0" leftOffset="0" />
       <IndexTextContainer phrases={phraseArray}/>

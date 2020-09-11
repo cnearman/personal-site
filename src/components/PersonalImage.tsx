@@ -9,6 +9,7 @@ const ImagePlacer = styled.div`
 	position: absolute;
 	bottom: -1px;
 	right: -11px;
+	z-index: -1;
 	${media.desktop`
 		width: 100%;
 		height: auto;
