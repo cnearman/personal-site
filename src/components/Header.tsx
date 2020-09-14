@@ -46,6 +46,7 @@ const NavListLink = styled(Link)`
   	color: #fff;
   	box-shadow: none;
   	letter-spacing: 2px;
+  	text-decoration: none;
 `;
 
 const Logo = () => {

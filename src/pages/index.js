@@ -1,11 +1,8 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import IndexLayout from "../components/IndexLayout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
-import { indexBackgroundImageUrl } from "@config";
 import ImageBackground from "@components/ImageBackground";
 import IndexTextContainer from "@components/IndexTextContainer";
 import PersonalImage from "@components/PersonalImage";

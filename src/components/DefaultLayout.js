@@ -1,16 +1,16 @@
 import React from "react";
-import { Link } from "gatsby";
 import Header from "./Header";
+import SEO from "../components/seo";
+import { GlobalStyle } from '@styles';
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 
-const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  let header
-
+const DefaultLayout = ({ location, title, children }) => {
   return (
     <div>
       <Header />
+      <SEO title={title} />
+      <GlobalStyle />
       <div
         style={{
           marginLeft: `auto`,
@@ -20,11 +20,9 @@ const Layout = ({ location, title, children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
-        </footer>
       </div>
     </div>
   )
 }
 
-export default Layout;
+export default DefaultLayout;

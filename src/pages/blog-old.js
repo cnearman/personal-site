@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import DefaultLayout from "../components/DefaultLayout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
@@ -11,7 +11,7 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <DefaultLayout location={location} title={siteTitle}>
       <SEO title="All posts" />
       <Bio />
       {posts.map(({ node }) => {
@@ -40,7 +40,7 @@ const BlogIndex = ({ data, location }) => {
           </article>
         )
       })}
-    </Layout>
+    </DefaultLayout>
   )
 }
 
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {type: {eq: "blogpost"}}}) {
       edges {
         node {
           excerpt
@@ -68,5 +68,4 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
-`
+  }`
