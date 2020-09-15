@@ -1,7 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-
-import IndexLayout from "../components/IndexLayout"
 import SEO from "../components/seo"
 import ImageBackground from "@components/ImageBackground";
 import IndexTextContainer from "@components/IndexTextContainer";
@@ -10,18 +8,16 @@ import background from "@assets/background.png";
 import Loader from "@components/Loader";
 
 const Main = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-
   let phraseArray = ["Engineer.", "Creator.", "Entertainer."];
 
   return (
-    <IndexLayout location={location} title={siteTitle}>
-      <Loader />
-      <SEO title="Home" />
-      <ImageBackground imageUrl={background} topOffset="0" leftOffset="0" />
-      <IndexTextContainer phrases={phraseArray}/>
-      <PersonalImage />
-    </IndexLayout>
+        <section>
+          <Loader />
+          <SEO title="Home" />
+          <ImageBackground imageUrl={background} topOffset="0" leftOffset="0" />
+          <IndexTextContainer phrases={phraseArray}/>
+          <PersonalImage />
+        </section>
   )
 }
 

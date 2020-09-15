@@ -1,16 +1,9 @@
 import React from "react";
-import Header from "./Header";
-import SEO from "../components/seo";
-import { GlobalStyle } from '@styles';
 
 import { rhythm } from "../utils/typography"
 
 const DefaultLayout = ({ location, title, children }) => {
   return (
-    <div>
-      <Header />
-      <SEO title={title} />
-      <GlobalStyle />
       <div
         style={{
           marginLeft: `auto`,
@@ -21,7 +14,6 @@ const DefaultLayout = ({ location, title, children }) => {
       >
         <main>{children}</main>
       </div>
-    </div>
   )
 }
 

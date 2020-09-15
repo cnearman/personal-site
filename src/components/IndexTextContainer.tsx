@@ -28,7 +28,7 @@ const IndexTextContainer = (props) => {
 	return (
 		<TextElementContainer>
 			{props.phrases && props.phrases.map((element, index) => (
-				<TextElement id={`indexElement${index + 1}`}>{element}</TextElement>
+				<TextElement key={`indexElement${index + 1}`} id={`indexElement${index + 1}`}>{element}</TextElement>
 			))}
 		</TextElementContainer>
 	);

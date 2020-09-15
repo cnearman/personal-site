@@ -98,7 +98,7 @@ const Header = () => {
 				<NavList>
 					{ navigationLinks &&
 					  navigationLinks.map(({name, url}, index) => (
-						<NavListItem id={`navListItem${index + 1 }`}>
+						<NavListItem key={name} id={`navListItem${index + 1 }`}>
 							<NavListLink to={url}>{name}</NavListLink>
 						</NavListItem>
 					))}
