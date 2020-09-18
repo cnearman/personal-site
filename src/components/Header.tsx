@@ -39,6 +39,20 @@ const NavList = styled.ol`
 
 const NavListItem = styled.li`
 	margin: 0 10px;
+	&:hover {
+  		transition: all 0.2s ease-in;
+  		transform: translateY(-10px);
+  		text-shadow: 2px 3px 10px #0000006b;
+  	}
+
+  	@keyframes slide-up {
+	  0% {
+	    transform: translate(0, 0);    
+	  }
+	  100% {
+	    transform: translate(0, -10px);
+	  }
+	}
 `;
 
 const NavListLink = styled(Link)`
