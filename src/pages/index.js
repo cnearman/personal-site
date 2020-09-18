@@ -13,7 +13,6 @@ const Main = ({ data, location }) => {
 
   return (
         <section>
-          <IndexStyle />
           <Loader />
           <SEO title="Home" />
           <ImageBackground imageUrl={background} topOffset="0" leftOffset="0" />

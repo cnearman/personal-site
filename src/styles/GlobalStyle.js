@@ -4,11 +4,17 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-family: neue-haas-grotesk-display, sans-serif;
-    	background-color: #0F1F2C; //#8697A5
+    	background-color: #0F1F2C; 
     	color: #fff;
     	-ms-overflow-style: none; /* IE 11 */
     	scrollbar-width: none; /* Firefox 64 */
     	&::-webkit-scrollbar { display: none; }
+    	${({ location }) => location === "/" && `	
+			overflow: hidden;
+			position: relative;
+			height: 100vh;
+			width: 100%;
+		`}
 	}
 
 	h1 h2 h3 h4 h5 h6 {

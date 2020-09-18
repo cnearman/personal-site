@@ -26,9 +26,9 @@ const Layout = ({ location, title, children }) => {
   return (
     <div>
       <Header />
-      <GlobalStyle />
+      <GlobalStyle location={location}/>
       <TransitionGroup>
-      <CSSTransition key={location.pathname} classNames={{ enter, enterActive, exit, exitActive }} timeout={1000} >
+      	<CSSTransition key={location.pathname} classNames={{ enter, enterActive, exit, exitActive }} timeout={1000} >
       	<div>
       		{children}
       	</div>
