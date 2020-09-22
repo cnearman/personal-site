@@ -26,8 +26,9 @@ const MenuSidebar = styled.aside`
 		height: 100vh;
 		width: min(75vw, 400px);
 		outline: 0;
-		background-color: #000000BB;
+		background-color: #000000CC;
 		box-shadow: -10px 0px 30px -15px light-gray;
+		justify-content: center;
 		z-index: 9;
 		padding: 30px;
     	transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
@@ -38,28 +39,28 @@ const MenuSidebar = styled.aside`
 	  nav {
 	    width: 100%;
 	    flex-direction: column;
+  		align-self: center;
 	    color: black;
 	    text-align: center;
 	  }
 
   	ol {
-    	padding: 0;
     	margin: 0;
     	list-style: none;
     	width: 100%;
     	
     	li {
     	  position: relative;
-    	  margin: 0 auto 20px;
+    	  margin: 0 auto 40px;
     	  font-size: clamp(4em, 4vw, 8em);
 
     	  @media (max-width: 600px) {
-    	    margin: 0 auto 10px;
+    	    margin: 0 auto 40px;
     	  }
         }
 	    a {
 	      width: 100%;
-	      padding: 3px 20px 20px;		  	
+	      padding: 3px 20px 80px;		  	
 	      color: #fff;
 		  box-shadow: none;
 		  letter-spacing: 2px;
@@ -74,6 +75,7 @@ const ResumeLink = styled.a`
   	letter-spacing: 2px;
   	text-decoration: none;
    	font-size: clamp(4em, 4vw, 8em);
+   	padding-bottom:120px;
 `
 
 const MobileMenu = () => {

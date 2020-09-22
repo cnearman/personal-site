@@ -6,6 +6,9 @@ import SEO from "../components/seo"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 
+const GamesPageTitle = styled.h1`
+`;
+
 const GameTitle = styled.h2`
 
 `;
@@ -22,6 +25,7 @@ const GamesPage = ({ data, location }) => {
   return (
       <DefaultLayout location={location} title={siteTitle}>
       <SEO title={siteTitle} />
+        <GamesPageTitle>Games</GamesPageTitle>
         { games.map( ({node}) => {
           const gameTitle = node.frontmatter.title || node.fields.slug;
           return (

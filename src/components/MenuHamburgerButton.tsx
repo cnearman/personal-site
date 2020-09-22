@@ -7,6 +7,7 @@ const HamburgerButton= styled.button`
 	display:none;
 	background-color: transparent;
 	border: 0;
+	z-index: -1;
 
 	${media.desktop`
 		display: block;
