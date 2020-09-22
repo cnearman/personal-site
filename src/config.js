@@ -11,10 +11,6 @@ module.exports = {
 		{
 			name: 'Games',
 			url: '/games'
-		},
-		{
-			name: 'Resume',
-			url: '/resume'
 		}
 	],
 

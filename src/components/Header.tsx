@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from 'gatsby';
 import { navigationLinks }  from "@config";
 import { media } from "@styles";
+import resume from "@assets/Resume-Chris-Nearman.pdf";
 
 const HeaderContainer = styled.header`
 	width: 100%;
@@ -63,6 +64,14 @@ const NavListLink = styled(Link)`
   	text-decoration: none;
 `;
 
+const ResumeLink = styled.a`
+  	padding: 12px 62px;
+  	color: #fff;
+  	box-shadow: none;
+  	letter-spacing: 2px;
+  	text-decoration: none;
+`
+
 const Logo = () => {
 	return (
 		<a href="/" style={{ boxShadow : "none", color: "inherit" }}>
@@ -116,6 +125,9 @@ const Header = () => {
 							<NavListLink to={url}>{name}</NavListLink>
 						</NavListItem>
 					))}
+					<NavListItem key={name} id='resume'>
+						<ResumeLink href={resume} target='_blank'>Resume</ResumeLink>
+					</NavListItem>
 				</NavList>
 			</NavLinkContainer>
 		</HeaderContainer>

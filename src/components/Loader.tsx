@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import anime from 'animejs';
 import styled from "styled-components";
+import Cookies from 'universal-cookie';
 
 const Background = styled.div`
 	background-color: #0F1F2C;
@@ -11,11 +12,14 @@ const Background = styled.div`
 	height: 100vh;
 `;
 
+const cookies = new Cookies;
+
 const Loader = ({onLoadingCompleteCallback}) => {
+	let loaderCookie = cookies.get('loaderComplete');
 	const animateEntry = () => {
 		const loader = anime.timeline({
   			easing: 'easeOutExpo',
-			complete: () => {setIsComplete(true);}
+			complete: () => {setIsComplete(true);cookies.set('loaderComplete', 'true')}
 		});
 
 		loader.add({
@@ -59,7 +63,11 @@ const Loader = ({onLoadingCompleteCallback}) => {
  	const [isComplete, setIsComplete] = useState(false);
 
 	useEffect(() => {
-	    animateEntry();
+		if (!loaderCookie){
+	    	animateEntry();
+		} else {
+			setIsComplete(true);
+		}
   	}, [])
 
 	var result = !isComplete ? <Background id="loaderBackground" /> : null;

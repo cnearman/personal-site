@@ -9,6 +9,7 @@ const ImageBackground = ({imageUrl, topOffset, leftOffset}) => {
 			left: leftOffset,
 			backgroundRepeat: "no-repeat",
 			backgroundPosition: "center",
+			backgroundSize: "cover",
 			width: "100vw",
 			height: "100vh",
 			objectFit: "none",
