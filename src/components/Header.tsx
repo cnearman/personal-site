@@ -125,7 +125,7 @@ const Header = () => {
 							<NavListLink to={url}>{name}</NavListLink>
 						</NavListItem>
 					))}
-					<NavListItem key={name} id='resume'>
+					<NavListItem key='resume' id='resume'>
 						<ResumeLink href={resume} target='_blank'>Resume</ResumeLink>
 					</NavListItem>
 				</NavList>
