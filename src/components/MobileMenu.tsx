@@ -90,7 +90,7 @@ const MobileMenu = () => {
   useOnClickOutside(wrapperRef, () => setMenuOpen(false));
 
 	return (
-		<div ref={wrapperRef}>
+		<MenuContainer ref={wrapperRef}>
 		<MenuContainer onClick={toggleMenu} menuOpen={menuOpen}>
 			<MenuHamburgerButton />
 		</MenuContainer>
@@ -108,7 +108,7 @@ const MobileMenu = () => {
 			<ResumeLink href={resume} target='_blank'>Resume</ResumeLink>
           </nav>
         </MenuSidebar>
-		</div>
+		</MenuContainer>
 	)
 }
 
