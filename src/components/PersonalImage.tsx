@@ -13,13 +13,18 @@ const ImagePlacer = styled.div`
 	${media.desktop`
 		width: 100%;
 		height: auto;
-		max-height: max-content;
+		max-height: 500px;
+		max-width: 500px;
 		bottom: -10px;
 	`};
 `
 
 const ImageObject = styled.img`
 	margin:0px 0px;
+	${media.desktop`
+		max-height: 500px;
+		height: auto;
+	`};
 `
 
 const PersonalImage = () => {

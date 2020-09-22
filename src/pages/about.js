@@ -3,8 +3,6 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import DefaultLayout from "../components/DefaultLayout";
 import SEO from "../components/seo"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import aboutImage from "@assets/nearmanabout.jpg";
 import { Link } from 'gatsby';
 

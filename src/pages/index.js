@@ -6,8 +6,6 @@ import IndexTextContainer from "@components/IndexTextContainer";
 import PersonalImage from "@components/PersonalImage";
 import background from "@assets/background.png";
 import Loader from "@components/Loader";
-import { IndexStyle } from '@styles';
-
 const Main = ({ data, location }) => {
   let phraseArray = ["Engineer.", "Creator.", "Entertainer."];
 

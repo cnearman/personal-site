@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 import { navigationLinks }  from "@config";
 import { media } from "@styles";
 import resume from "@assets/Resume-Chris-Nearman.pdf";
+import MobileMenu from "@components/MobileMenu";
 
 const HeaderContainer = styled.header`
 	width: 100%;
@@ -130,6 +131,7 @@ const Header = () => {
 					</NavListItem>
 				</NavList>
 			</NavLinkContainer>
+			<MobileMenu />
 		</HeaderContainer>
 	);
 }
