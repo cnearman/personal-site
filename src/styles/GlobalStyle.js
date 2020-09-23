@@ -4,8 +4,8 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-family: neue-haas-grotesk-display, sans-serif;
-    	background-color: #0F1F2C; 
-    	color: #fff;
+    	background-color: #fff; 
+    	color: #0F1F2C;
     	-ms-overflow-style: none; /* IE 11 */
     	scrollbar-width: none; /* Firefox 64 */
     	&::-webkit-scrollbar { display: none; }

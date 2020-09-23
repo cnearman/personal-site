@@ -24,7 +24,7 @@ const NavLinkContainer = styled.div`
 	justify-content: space-between;
 	align-items:center;
 	font-weight: 700;
-	font-size: 32px;
+	font-size: 20px;
 	display: flex;
 	alight-items: center;
 	${media.desktop`display:none;`};
@@ -58,16 +58,16 @@ const NavListItem = styled.li`
 `;
 
 const NavListLink = styled(Link)`
-  	padding: 12px 62px;
   	color: #fff;
+  	padding: 12px 32px;
   	box-shadow: none;
   	letter-spacing: 2px;
   	text-decoration: none;
 `;
 
 const ResumeLink = styled.a`
-  	padding: 12px 62px;
   	color: #fff;
+  	padding: 12px 32px;
   	box-shadow: none;
   	letter-spacing: 2px;
   	text-decoration: none;
@@ -123,7 +123,7 @@ const Header = () => {
 					{ navigationLinks &&
 					  navigationLinks.map(({name, url}, index) => (
 						<NavListItem key={name} id={`navListItem${index + 1 }`}>
-							<NavListLink to={url}>{name}</NavListLink>
+							<NavListLink activeStyle={{textDecoration : "underline"}} to={url}>{name}</NavListLink>
 						</NavListItem>
 					))}
 					<NavListItem key='resume' id='resume'>

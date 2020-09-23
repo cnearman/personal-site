@@ -1,6 +1,10 @@
 module.exports = {
 	navigationLinks: [
 		{
+			name: 'Home',
+			url: '/'
+		},
+		{
 			name: 'About',
 			url: '/about'
 		},

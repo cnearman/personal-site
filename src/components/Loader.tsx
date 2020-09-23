@@ -24,6 +24,11 @@ const Loader = ({onLoadingCompleteCallback}) => {
 
 		loader.add({
 			delay: 0,
+			targets: '#loaderBackground',
+			zIndex: 0,
+			duration: 1
+		}).add({
+			delay: 0,
 			targets: '#indexElement1',
 			translateX: '-=1000',
 			duration: 1
@@ -70,7 +75,9 @@ const Loader = ({onLoadingCompleteCallback}) => {
 		}
   	}, [])
 
-	var result = !isComplete ? <Background id="loaderBackground" /> : null;
+	var result = !isComplete 
+		? <div style= {{backgroundColor: "#0F1F2C", position: "absolute", top: "0px", left: "0px",	width: "100vw",	height: "100vh", zIndex: 99}} id="loaderBackground" /> 
+		: null;
 
   	return result;
 };
