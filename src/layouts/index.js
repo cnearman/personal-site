@@ -24,7 +24,7 @@ const exitActive = css`
 
 const Layout = ({ location, title, children }) => {
 
-  let useDark = location.pathname != "/";
+  let useDark = location.pathname !== "/";
   return (
     <div>
       <Header useDark={useDark} />
