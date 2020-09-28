@@ -28,6 +28,9 @@ const NavLinkContainer = styled.div`
 	display: flex;
 	alight-items: center;
 	${media.desktop`display:none;`};
+	a {
+  		color: ${props => props.useDark ? "#000" : "#fff"};
+	}
 `;
 
 const NavList = styled.ol`
@@ -58,7 +61,6 @@ const NavListItem = styled.li`
 `;
 
 const NavListLink = styled(Link)`
-  	color: #fff;
   	padding: 12px 32px;
   	box-shadow: none;
   	letter-spacing: 2px;
@@ -66,20 +68,19 @@ const NavListLink = styled(Link)`
 `;
 
 const ResumeLink = styled.a`
-  	color: #fff;
   	padding: 12px 32px;
   	box-shadow: none;
   	letter-spacing: 2px;
   	text-decoration: none;
 `
 
-const Logo = () => {
+const Logo = (props) => {
 	return (
 		<a href="/" style={{ boxShadow : "none", color: "inherit" }}>
 			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84.02 88.05" style={{enableBackground : "new 0 0 84.02 88.05"}}  width="88" height="88">
-				<text transform="matrix(1 0 0 1 23.1979 62.4833)" style={{fill:"#FFFFFF", fontFamily:"neue-haas-grotesk-display, sans-serif", fontSize:"54px"}}>N</text>
+				<text transform="matrix(1 0 0 1 23.1979 62.4833)" style={{fill: props.useDark ? "#000000" : "#ffffff", fontFamily:"neue-haas-grotesk-display, sans-serif", fontSize:"54px"}}>N</text>
 				<g id="border">
-					<rect x="3.92" y="3.76" style={{ fill:"none", stroke:"#FFFFFF", strokeWidth:"8" }} width="76.35" height="80.34"/>
+					<rect x="3.92" y="3.76" style={{ fill:"none", stroke: props.useDark ? "#000000" : "#ffffff", strokeWidth:"8" }} width="76.35" height="80.34"/>
 				</g>
 			</svg>
 		</a>
@@ -111,14 +112,14 @@ function useWindowSize() {
 	return windowSize;
 }
 
-const Header = () => {
+const Header = (props) => {
   	const [isMenuOpen, setIsMenuOpen] = useState(false);
   	const size = useWindowSize();
 
 	return (
 		<HeaderContainer>
-			<Logo/>
-			<NavLinkContainer>
+			<Logo useDark={props.useDark} />
+			<NavLinkContainer useDark={props.useDark} >
 				<NavList>
 					{ navigationLinks &&
 					  navigationLinks.map(({name, url}, index) => (
@@ -131,7 +132,7 @@ const Header = () => {
 					</NavListItem>
 				</NavList>
 			</NavLinkContainer>
-			<MobileMenu />
+			<MobileMenu useDark={props.useDark}/>
 		</HeaderContainer>
 	);
 }

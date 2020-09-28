@@ -6,9 +6,10 @@ import { GlobalStyle } from '@styles';
 import { rhythm, scale } from "../utils/typography"
 
 const IndexLayout = ({ location, title, children }) => {
+  let useDark = location !== "/";
   return (
     <div>
-      <Header />
+      <Header useDark={useDark} />
       <GlobalStyle />
       {children}
     </div>

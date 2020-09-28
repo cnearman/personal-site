@@ -78,7 +78,7 @@ const ResumeLink = styled.a`
    	padding-bottom:120px;
 `
 
-const MobileMenu = () => {
+const MobileMenu = (props) => {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -92,7 +92,7 @@ const MobileMenu = () => {
 	return (
 		<MenuContainer ref={wrapperRef}>
 		<MenuContainer onClick={toggleMenu} menuOpen={menuOpen}>
-			<MenuHamburgerButton />
+			<MenuHamburgerButton useDark={props.useDark}/>
 		</MenuContainer>
 		<MenuSidebar menuOpen={menuOpen} aria-hidden={!menuOpen} tabIndex={menuOpen ? 1 : -1}>
           <nav ref={navRef}>

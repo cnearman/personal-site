@@ -23,9 +23,11 @@ const exitActive = css`
 `;
 
 const Layout = ({ location, title, children }) => {
+
+  let useDark = location.pathname != "/";
   return (
     <div>
-      <Header />
+      <Header useDark={useDark} />
       <GlobalStyle location={location}/>
       <TransitionGroup>
       	<CSSTransition key={location.pathname} classNames={{ enter, enterActive, exit, exitActive }} timeout={1000} >

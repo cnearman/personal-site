@@ -31,7 +31,7 @@ const Hamburger = styled.div`
     width: 30px;
     height: 2px;
     border-radius: 2px;
-    background-color: #fff;
+    background-color: ${props => props.useDark ? "#000" : "#fff"};
 
     &:before, &:after {
       content: '';
@@ -42,7 +42,7 @@ const Hamburger = styled.div`
       width: 30px;
       height: 2px;
       border-radius: 2px;
-      background-color: #fff;
+      background-color: ${props => props.useDark ? "#000" : "#fff"};
     }
     &:before{
       	width: 120%;
@@ -55,11 +55,11 @@ const Hamburger = styled.div`
 `
 
 
-const MenuHamburgerButton = () =>{
+const MenuHamburgerButton = (props) =>{
 	return ( 
 		<HamburgerButton>
 			<HamburgerContainer>
-				<Hamburger/>
+				<Hamburger useDark={props.useDark}/>
 			</HamburgerContainer>
 		</HamburgerButton>
 	);
