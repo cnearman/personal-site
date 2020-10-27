@@ -5,7 +5,7 @@ module.exports = {
       name: `Chris Nearman`,
       summary: `who lives and works in Seattle building useless things.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Engineer. Designer. Creator.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `sheepparade`,
