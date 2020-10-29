@@ -6,7 +6,7 @@ module.exports = {
       summary: `who lives and works in Seattle building useless things.`,
     },
     description: `Engineer. Designer. Creator.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://www.chrisnearman.com`,
     social: {
       twitter: `sheepparade`,
       twitch: `sheepparade`
@@ -34,6 +34,7 @@ module.exports = {
         name: `games`,
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
