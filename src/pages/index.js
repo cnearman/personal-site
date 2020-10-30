@@ -34,6 +34,7 @@ const Main = ({ data, location }) => {
         <section>
           <Loader />
           <SEO title="Home" />
+          <h1 style={{display: "none"}}>Chris Nearman</h1>
           <ImageBackground imageUrl={background} topOffset="0" leftOffset="0" />
           <IndexTextContainer phrases={phraseArray}/>
           <PersonalImage />

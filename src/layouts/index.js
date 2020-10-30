@@ -3,6 +3,8 @@ import Header from "@components/Header";
 import { GlobalStyle } from '@styles';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import {css} from 'emotion';
+import favicon from '../../static/favicon.ico'
+import Helmet from 'react-helmet'
 
 const enter = css`
   opacity: 0.01;
@@ -27,6 +29,9 @@ const Layout = ({ location, title, children }) => {
   let useDark = location.pathname !== "/";
   return (
     <div>
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Header useDark={useDark} />
       <GlobalStyle location={location}/>
       <TransitionGroup>
