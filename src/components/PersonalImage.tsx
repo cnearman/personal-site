@@ -14,7 +14,7 @@ const ImagePlacer = styled.div`
 	${media.desktop`
 		width: 100%;
 		height: auto;
-		max-height: 500px;
+		max-height: 580px;
 		max-width: 500px;
 		display:flex;
 		align-items: flex-end;
