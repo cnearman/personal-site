@@ -10,11 +10,14 @@ const ImagePlacer = styled.div`
 	bottom: 0px;
 	right: 0px;
 	z-index: -1;
+	overflow: hidden;
 	${media.desktop`
 		width: 100%;
 		height: auto;
 		max-height: 500px;
 		max-width: 500px;
+		display:flex;
+		align-items: flex-end;
 	`};
 `
 
@@ -22,9 +25,6 @@ const ImageObject = styled.img`
 	margin:0px 0px;
 	${media.desktop`
 		width: 100%;
-		max-height: 500px;
-		max-width: 500px;
-		height: auto;
 	`};
 `
 
