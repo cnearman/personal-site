@@ -28,7 +28,7 @@ const AboutPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
   return (
       <DefaultLayout location={location} title={siteTitle}>
-      <SEO title={siteTitle} />
+      <SEO title="About" description="Seattle-based Software engineer, focused on building cloud-based solutions to connect businesses with their customers."/>
       <AboutTitle>About Chris!</AboutTitle>
       <AboutContainer>
         <AboutText>I am a software engineer from Seattle, focused on build cloud-based systems (primarily in Azure, however I've also used AWS and GCS). I've also been developing games since a young age and love participating in game jams. Check out some of my games <Link to="/games">here!</Link></AboutText>

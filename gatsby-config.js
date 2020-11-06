@@ -2,8 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Chris Nearman`,
     author: {
-      name: `Chris Nearman`,
-      summary: `who lives and works in Seattle building useless things.`,
+      name: `Chris Nearman`
     },
     description: `Engineer. Designer. Creator.`,
     siteUrl: `https://www.chrisnearman.com`,
@@ -25,6 +24,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/games`,
         name: `games`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
     `gatsby-plugin-sitemap`,

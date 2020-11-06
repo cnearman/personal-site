@@ -24,7 +24,7 @@ const GamesPage = ({ data, location }) => {
 
   return (
       <DefaultLayout location={location} title={siteTitle}>
-      <SEO title={siteTitle} />
+      <SEO title="Games" description="Check out the games Chris is working on!"/>
         <GamesPageTitle>Games</GamesPageTitle>
         { games.map( ({node}) => {
           const gameTitle = node.frontmatter.title || node.fields.slug;
