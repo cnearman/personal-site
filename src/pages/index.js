@@ -10,7 +10,7 @@ import styled from "styled-components";
 import Cookies from 'universal-cookie';
 
 const ResetAnimationButton = styled.button`
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 10px;
   border: 0;
