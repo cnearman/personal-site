@@ -6,7 +6,7 @@ import { media } from "@styles";
 const ImagePlacer = styled.div`
 	width: 686px;
 	height: 705px;
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
 	right: 0px;
 	z-index: -1;
